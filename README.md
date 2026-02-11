@@ -13,19 +13,22 @@ This is a sample Cypress project demonstrating **login automation** using the **
 
 ## 📂 Project Structure
 
-cypress/
-├─ e2e/
-│ └─ login.cy.js
-├─ fixtures/
-│ └─ users.json
-├─ pages/
-│ └─ LoginPage.js
-├─ support/
-│ ├─ commands.js
-│ └─ e2e.js
+cypress 
+
+  e2e > login.cy.js
+
+  fixtures > users.json
+
+  pages > LoginPage.js 
+
+  support > commands.js, e2e.js
+
 .gitignore
+
 cypress.config.js
+
 LICENSE
+
 README.md
 
 
@@ -33,15 +36,21 @@ README.md
 
 1. Clone the repository:
 
-`bash
-git clone https://github.com/yourusername/cypress-herokuapp.git
+`git clone https://github.com/yourusername/cypress-herokuapp.git
 cd cypress-herokuapp`
+
 2. Install dependencies:
-npm install
+
+`npm install`
+
 3. Open Cypress:
-npx cypress open
+
+`npx cypress open`
+
 Or run headless tests:
-npx cypress run
+
+`npx cypress run`
+
 🚀 Usage
 
 All login actions are handled via the LoginPage class.
