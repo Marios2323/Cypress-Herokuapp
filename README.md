@@ -1,15 +1,28 @@
-# Cypress Herokuapp Login Project
+#Cypress Herokuapp Login Automation
 
-This is a sample Cypress project demonstrating **login automation** using the **Page Object Model (POM)** pattern.
+End-to-end login automation project built with Cypress using the Page Object Model (POM) design pattern.
 
-## 🧪 Features
+The project validates positive and negative authentication scenarios against the Herokuapp test site.
 
-- Login feature automation
-- Page Object Model (POM) for maintainable tests
-- Positive and negative login scenarios
-- Fixtures for test data
-- Custom commands in `support/commands.js`
-- Cypress configuration in `cypress.config.js`
+##🔍 What This Project Demonstrates
+
+Structured test automation architecture
+
+Page Object Model implementation
+
+Data-driven testing using fixtures
+
+Clean test separation and reusable methods
+
+Professional project structure
+
+##🧪 Test Scenarios Covered
+
+Successful login with valid credentials
+
+Login attempt with invalid username
+
+Login attempt with invalid password
 
 ## 📂 Project Structure
 
@@ -29,36 +42,26 @@ LICENSE
 README.md
 
 
-## ⚙️ Installation
+##⚙️ Installation & Execution
 
 1. Clone the repository:
 
 `bash
 git clone https://github.com/yourusername/cypress-herokuapp.git
-cd cypress-herokuapp`
-2. Install dependencies:
-npm install
-3. Open Cypress:
-npx cypress open
-Or run headless tests:
-npx cypress run
-🚀 Usage
+cd cypress-herokuapp
+npm install`
+2. Run Cypress UI:
+'npx cypress open'
+3. Run headless:
+'npx cypress run'
+##🛠 Tech Stack
 
-All login actions are handled via the LoginPage class.
+*Cypress 10+
 
-Add new tests in cypress/e2e/.
+*JavaScript (ES6)
 
-Add selectors in pages/ to keep tests clean and maintainable.
+*Node.js LTS
 
-Fixtures can be used for test data.
+##📄 License
 
-📝 Notes
-
-Ensure Node.js (LTS) is installed.
-
-Cypress version: 10.x+ (adjust if needed).
-
-📄 License
-
-This project is licensed under the MIT License. See LICENSE
-for details.
+MIT License
