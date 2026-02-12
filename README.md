@@ -26,19 +26,22 @@ Login attempt with invalid password
 
 ## 📂 Project Structure
 
-cypress/
-├─ e2e/
-│ └─ login.cy.js
-├─ fixtures/
-│ └─ users.json
-├─ pages/
-│ └─ LoginPage.js
-├─ support/
-│ ├─ commands.js
-│ └─ e2e.js
+cypress 
+
+  e2e > login.cy.js
+
+  fixtures > users.json
+
+  pages > LoginPage.js 
+
+  support > commands.js, e2e.js
+
 .gitignore
+
 cypress.config.js
+
 LICENSE
+
 README.md
 
 
