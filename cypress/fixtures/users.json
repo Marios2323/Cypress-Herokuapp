@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "type": "valid",
+      "username": "tomsmith",
+      "password": "SuperSecretPassword!"
+    },
+    {
+      "type": "invalidUsername",
+      "username": "wrong",
+      "password": "SuperSecretPassword!"
+    },
+    {
+      "type": "invalidPassword",
+      "username": "tomsmith",
+      "password": "wrong"
+    }
+  ]
+}
