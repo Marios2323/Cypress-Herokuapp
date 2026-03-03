@@ -1,10 +1,10 @@
-#Cypress Herokuapp Login Automation
+# Cypress Herokuapp Login Automation
 
 End-to-end login automation project built with Cypress using the Page Object Model (POM) design pattern.
 
 The project validates positive and negative authentication scenarios against the Herokuapp test site.
 
-##🔍 What This Project Demonstrates
+## 🔍 What This Project Demonstrates
 
 Structured test automation architecture
 
@@ -16,7 +16,7 @@ Clean test separation and reusable methods
 
 Professional project structure
 
-##🧪 Test Scenarios Covered
+## 🧪 Test Scenarios Covered
 
 Successful login with valid credentials
 
@@ -45,26 +45,30 @@ LICENSE
 README.md
 
 
-##⚙️ Installation & Execution
+## ⚙️ Installation & Execution
 
 1. Clone the repository:
 
-`bash
-git clone https://github.com/yourusername/cypress-herokuapp.git
-cd cypress-herokuapp
-npm install`
+`git clone https://github.com/yourusername/cypress-herokuapp.git`
+
+`cd cypress-herokuapp`
+
+`npm install`
+
 2. Run Cypress UI:
 'npx cypress open'
-3. Run headless:
+
+4. Run headless:
 'npx cypress run'
-##🛠 Tech Stack
 
-*Cypress 10+
+## 🛠 Tech Stack
 
-*JavaScript (ES6)
+* Cypress 10+
 
-*Node.js LTS
+* JavaScript (ES6)
 
-##📄 License
+* Node.js LTS
+
+## 📄 License
 
 MIT License
