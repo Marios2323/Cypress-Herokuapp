@@ -1,19 +1,17 @@
 {
-  "users": [
-    {
-      "type": "valid",
-      "username": "tomsmith",
-      "password": "SuperSecretPassword!"
-    },
-    {
-      "type": "invalidUsername",
-      "username": "wrong",
-      "password": "SuperSecretPassword!"
-    },
-    {
-      "type": "invalidPassword",
-      "username": "tomsmith",
-      "password": "wrong"
-    }
-  ]
+  "valid": {
+    "username": "tomsmith",
+    "password": "SuperSecretPassword!",
+    "message": "You logged into a secure area!"
+  },
+  "invalidUsername": {
+    "username": "wrong",
+    "password": "SuperSecretPassword!",
+    "message": "Your username is invalid!"
+  },
+  "invalidPassword": {
+    "username": "tomsmith",
+    "password": "wrong",
+    "message": "Your password is invalid!"
+  }
 }
