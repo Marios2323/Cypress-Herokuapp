@@ -1,26 +1,25 @@
 class LoginPage {
 
+  elements = {
+    username: () => cy.get('#username'),
+    password: () => cy.get('[name="password"]'),
+    loginButton: () => cy.contains('button', 'Login'),
+    flashMessage: () => cy.get('#flash')
+  };
+
   visit() {
-    cy.visit('https://the-internet.herokuapp.com/login');
-  }
-
-  enterUsername(username) {
-    cy.get('#username').type(username);
-  }
-
-  enterPassword(password) {
-    cy.get('[name="password"]').type(password);
-  }
-
-  clickLogin() {
-    cy.contains('button', 'Login').click();
+    cy.visit('/login');
   }
 
   login(username, password) {
-    this.enterUsername(username);
-    this.enterPassword(password);
-    this.clickLogin();
+    this.elements.username().type(username);
+    this.elements.password().type(password);
+    this.elements.loginButton().click();
+  }
+
+  getFlashMessage() {
+    return this.elements.flashMessage();
   }
 }
 
-export default LoginPage;
+export default new LoginPage();
