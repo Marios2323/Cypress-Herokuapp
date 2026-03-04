@@ -12,13 +12,21 @@ class LoginPage {
   }
 
   login(username, password) {
-    this.elements.username().type(username);
-    this.elements.password().type(password);
-    this.elements.loginButton().click();
+    this.elements
+      .username()
+      .type(username);
+    this.elements
+      .password()
+      .type(password);
+    this.elements
+      .loginButton()
+      .click();
   }
 
-  getFlashMessage() {
-    return this.elements.flashMessage();
+  assertFlashMessage(expectedMessage) {
+    this.elements.flashMessage()
+      .should('be.visible')
+      .and('contain.text', expectedMessage);
   }
 }
 

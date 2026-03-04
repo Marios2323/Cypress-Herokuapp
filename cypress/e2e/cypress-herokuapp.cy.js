@@ -14,8 +14,7 @@ describe('Login Tests', () => {
 
       loginPage.login(user.username, user.password);
 
-      loginPage.getFlashMessage()
-        .should('contain.text', user.message);
+      loginPage.assertFlashMessage(user.message);
     });
   });
 });
