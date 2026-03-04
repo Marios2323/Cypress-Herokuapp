@@ -4,12 +4,12 @@
     "password": "SuperSecretPassword!",
     "message": "You logged into a secure area!"
   },
-  "invalidUsername": {
+  "invalid username": {
     "username": "wrong",
     "password": "SuperSecretPassword!",
     "message": "Your username is invalid!"
   },
-  "invalidPassword": {
+  "invalid password": {
     "username": "tomsmith",
     "password": "wrong",
     "message": "Your password is invalid!"
