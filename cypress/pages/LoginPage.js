@@ -2,7 +2,7 @@ class LoginPage {
 
   elements = {
     username: () => cy.get('#username'),
-    password: () => cy.get('[name="password"]'),
+    password: () => cy.get('#password'),
     loginButton: () => cy.get('button[type = "submit"]'),
     flashMessage: () => cy.get('#flash')
   };
