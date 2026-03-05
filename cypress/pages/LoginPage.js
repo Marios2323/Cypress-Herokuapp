@@ -28,6 +28,14 @@ class LoginPage {
       .should('be.visible')
       .and('contain.text', expectedMessage);
   }
+
+  assertSuccessfulLogin() {
+    cy.url().should('include', '/secure');
+  }
+
+  assertNotSuccessfulLogin() {
+    cy.url().should('not.include', '/secure');
+  }
 }
 
 export default new LoginPage();
