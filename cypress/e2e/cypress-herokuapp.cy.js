@@ -7,14 +7,14 @@ describe('Login Tests', () => {
     loginPage.visit();
   });
 
-  Object.keys(users).forEach(userType => {
-
-    it(`Should validate ${userType} scenario`, () => {
-      const user = users[userType];
-
+  users.forEach(user => {
+    it(user.name, () => {
       loginPage.login(user.username, user.password);
+      loginPage.assertFlashMessage(user.expectedMessage);
 
-      loginPage.assertFlashMessage(user.message);
+      if (user.loginSuccessful) {
+        loginPage.assertSuccessfulLogin();
+      }
     });
   });
 });
