@@ -1,17 +1,21 @@
-{
-  "valid": {
+[
+  {
+    "name": "valid login",
     "username": "tomsmith",
     "password": "SuperSecretPassword!",
-    "message": "You logged into a secure area!"
+    "expectedMessage": "You logged into a secure area!",
+    "loginSuccessful": true
   },
-  "invalid username": {
+  {
+    "name": "invalid username",
     "username": "wrong",
     "password": "SuperSecretPassword!",
-    "message": "Your username is invalid!"
+    "expectedMessage": "Your username is invalid!"
   },
-  "invalid password": {
+  {
+    "name": "invalid password",
     "username": "tomsmith",
     "password": "wrong",
-    "message": "Your password is invalid!"
+    "expectedMessage": "Your password is invalid!"
   }
-}
+]
