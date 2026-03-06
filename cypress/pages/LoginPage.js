@@ -32,10 +32,6 @@ class LoginPage {
   assertSuccessfulLogin() {
     cy.url().should('include', '/secure');
   }
-
-  assertNotSuccessfulLogin() {
-    cy.url().should('not.include', '/secure');
-  }
 }
 
 export default new LoginPage();
