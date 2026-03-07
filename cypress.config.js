@@ -1,11 +1,11 @@
-const { defineConfig } = require("cypress");
+import { defineConfig } from "cypress";
 
-module.exports = defineConfig({
-  allowCypressEnv: false,
-
+export default defineConfig({
   e2e: {
-    baseUrl: 'https://the-internet.herokuapp.com',
-    setupNodeEvents(on, config) {
-    },
-  },
+    baseUrl: "https://the-internet.herokuapp.com",
+    retries: {
+      runMode: 2,
+      openMode: 0
+    }
+  }
 });
