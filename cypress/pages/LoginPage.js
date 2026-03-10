@@ -17,7 +17,7 @@ class LoginPage {
       .type(username);
     this.elements
       .password()
-      .type(password);
+      .type(password, { sensitive: true });
     this.elements
       .loginButton()
       .click();
