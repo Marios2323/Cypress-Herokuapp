@@ -1,5 +1,5 @@
 import loginPage from '../pages/LoginPage';
-import users from '../fixtures/users.json';
+import users from '../fixtures/users.json'
 
 describe('Login Tests', () => {
 
@@ -9,6 +9,11 @@ describe('Login Tests', () => {
     loginPage.elements.password().should('be.visible');
   });
 
+  it("Valid login", () => {
+    loginPage.login(Cypress.env('username'), Cypress.env('password'));
+    loginPage.assertFlashMessage(Cypress.env('expectedMessage'));
+    loginPage.assertSuccessfulLogin();
+  })
   users.forEach(user => {
     it(user.name, () => {
       loginPage.login(user.username, user.password);
