@@ -5,6 +5,8 @@ describe('Login Tests', () => {
 
   beforeEach(() => {
     loginPage.visit();
+    loginPage.elements.username().should('be.visible');
+    loginPage.elements.password().should('be.visible');
   });
 
   users.forEach(user => {
