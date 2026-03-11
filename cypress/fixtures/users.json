@@ -10,5 +10,11 @@
     "username": "tomsmith",
     "password": "wrong",
     "expectedMessage": "Your password is invalid!"
-  }
+  },
+    {
+      "name": "Empty credentials",
+      "username": "",
+      "password": "",
+      "expectedMessage": "Your username is invalid!"
+    }
 ]
