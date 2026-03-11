@@ -22,6 +22,10 @@ Successful login with valid credentials
 
 Login attempt with invalid username
 
+Empty credentials scenario
+
+Flash message color validation
+
 Login attempt with invalid password
 
 ## 📂 Project Structure
@@ -55,11 +59,19 @@ README.md
 
 `npm install`
 
-2. Run Cypress UI:
-'npx cypress open'
+2. Set up environment variables:
 
-4. Run headless:
-'npx cypress run'
+`cp cypress.env.example.json cypress.env.json`
+
+3. Fill in your credentials in cypress.env.json
+
+4. Run Cypress UI:
+
+`npx cypress open`
+
+5. Run headless:
+   
+`npx cypress run`
 
 ## 🛠 Tech Stack
 
