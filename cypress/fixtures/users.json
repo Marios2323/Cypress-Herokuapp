@@ -3,18 +3,21 @@
     "name": "Invalid username",
     "username": "wrong",
     "password": "SuperSecretPassword!",
-    "expectedMessage": "Your username is invalid!"
+    "expectedMessage": "Your username is invalid!",
+    "flashClass": "flash error"
   },
   {
     "name": "Invalid password",
     "username": "tomsmith",
     "password": "wrong",
-    "expectedMessage": "Your password is invalid!"
+    "expectedMessage": "Your password is invalid!",
+    "flashClass": "flash error"
   },
     {
       "name": "Empty credentials",
       "username": "",
       "password": "",
-      "expectedMessage": "Your username is invalid!"
+      "expectedMessage": "Your username is invalid!",
+      "flashClass": "flash error"
     }
 ]
