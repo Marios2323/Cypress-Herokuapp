@@ -12,15 +12,13 @@ class LoginPage {
   }
 
   login(username, password) {
+    if (username) this.elements
+      .username().type(username);
+    if (password) this.elements
+      .password().type(password);
+
     this.elements
-      .username()
-      .type(username);
-    this.elements
-      .password()
-      .type(password, { sensitive: true });
-    this.elements
-      .loginButton()
-      .click();
+      .loginButton().click();
   }
 
   assertFlashMessage(expectedMessage) {
