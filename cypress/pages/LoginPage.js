@@ -21,10 +21,11 @@ class LoginPage {
       .loginButton().click();
   }
 
-  assertFlashMessage(expectedMessage) {
+  assertFlashMessage(expectedMessage, flashClass) {
     this.elements.flashMessage()
       .should('be.visible')
-      .and('contain.text', expectedMessage);
+      .and('contain.text', expectedMessage)
+      .and('have.class', flashClass);
   }
 
   assertSuccessfulLogin() {
