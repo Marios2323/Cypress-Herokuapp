@@ -10,10 +10,11 @@ describe('Login Tests', () => {
   });
 
   it("Valid login", () => {
-    loginPage.login(cy.env('username'), cy.env('password'));
-    loginPage.assertFlashMessage(cy.env('expectedMessage')
-      , cy.env('flashClass'));
-    loginPage.assertSuccessfulLogin();
+    cy.env(['username', 'password', 'expectedMessage', 'flashClass']).then((env) => {
+      loginPage.login(env.username, env.password);
+      loginPage.assertFlashMessage(env.expectedMessage, env.flashClass);
+      loginPage.assertSuccessfulLogin();
+    });
   })
   users.forEach(user => {
     it(user.name, () => {
