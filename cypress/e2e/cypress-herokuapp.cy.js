@@ -10,9 +10,9 @@ describe('Login Tests', () => {
   });
 
   it("Valid login", () => {
-    loginPage.login(Cypress.env('username'), Cypress.env('password'));
-    loginPage.assertFlashMessage(Cypress.env('expectedMessage')
-      , Cypress.env('flashClass'));
+    loginPage.login(cy.env('username'), cy.env('password'));
+    loginPage.assertFlashMessage(cy.env('expectedMessage')
+      , cy.env('flashClass'));
     loginPage.assertSuccessfulLogin();
   })
   users.forEach(user => {
