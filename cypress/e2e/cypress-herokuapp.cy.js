@@ -1,7 +1,7 @@
 import loginPage from '../pages/LoginPage';
 import users from '../fixtures/users.json'
 
-describe('Login Tests', () => {
+describe('Happy path', () => {
 
   beforeEach(() => {
     loginPage.visit();
@@ -16,6 +16,16 @@ describe('Login Tests', () => {
       loginPage.assertSuccessfulLogin();
     });
   })
+});
+
+describe("Negative login tests", () => {
+
+  beforeEach(() => {
+    loginPage.visit();
+    loginPage.elements.username().should('be.visible');
+    loginPage.elements.password().should('be.visible');
+  });
+
   users.forEach(user => {
     it(user.name, () => {
       loginPage.login(user.username, user.password);
@@ -26,4 +36,4 @@ describe('Login Tests', () => {
       }
     });
   });
-});
+})
