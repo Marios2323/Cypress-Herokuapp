@@ -9,6 +9,9 @@ on:
 jobs:
   cypress:
     runs-on: ubuntu-latest
+    strategy: 
+      matrix:
+        browser: [chrome, firefox]
     steps:
       - uses: actions/checkout@v4
       
@@ -19,7 +22,7 @@ jobs:
       - run: npm ci
       
       - name: Run Cypress
-        run: npx cypress run
+        run: npx cypress run --browser ${{ matrix.browser }}  
         env:
           CYPRESS_username: ${{ secrets.USERNAME }}
           CYPRESS_password: ${{ secrets.PASSWORD }}
