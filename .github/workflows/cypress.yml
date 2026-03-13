@@ -22,7 +22,7 @@ jobs:
       - run: npm ci
       
       - name: Run Cypress
-        run: npx cypress run --browser ${{ matrix.browser }}  
+        run: npx cypress run --browser ${{ matrix.browser }} --config experimentalWebKitSupport=false
         env:
           CYPRESS_username: ${{ secrets.USERNAME }}
           CYPRESS_password: ${{ secrets.PASSWORD }}
