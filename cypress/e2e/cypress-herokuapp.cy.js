@@ -1,14 +1,13 @@
 import loginPage from '../pages/LoginPage';
 import users from '../fixtures/users.json'
 
+beforeEach(() => {
+  loginPage.visit();
+  loginPage.elements.username().should('be.visible');
+  loginPage.elements.password().should('be.visible');
+});
+
 describe('Happy path', () => {
-
-  beforeEach(() => {
-    loginPage.visit();
-    loginPage.elements.username().should('be.visible');
-    loginPage.elements.password().should('be.visible');
-  });
-
   it("Valid login", () => {
     cy.env(['username', 'password', 'expectedMessage', 'flashClass']).then((env) => {
       loginPage.login(env.username, env.password);
@@ -18,14 +17,7 @@ describe('Happy path', () => {
   })
 });
 
-describe("Negative login tests", () => {
-
-  beforeEach(() => {
-    loginPage.visit();
-    loginPage.elements.username().should('be.visible');
-    loginPage.elements.password().should('be.visible');
-  });
-
+describe("Negative login tests", () =>
   users.forEach(user => {
     it(user.name, () => {
       loginPage.login(user.username, user.password);
@@ -35,5 +27,5 @@ describe("Negative login tests", () => {
         loginPage.assertSuccessfulLogin();
       }
     });
-  });
-})
+  })
+)
