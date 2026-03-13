@@ -73,13 +73,17 @@ README.md
    
 `npx cypress run`
 
+> ⚠️ Firefox currently not supported due to a known compatibility issue between Cypress 15 and Firefox 148 (WebDriver Bidi).
+
 ## 🛠 Tech Stack
 
-* Cypress 10+
+* Cypress 15+
 
 * JavaScript (ES6)
 
 * Node.js LTS
+
+* GitHub Actions CI (Chrome)
 
 ## 📄 License
 
