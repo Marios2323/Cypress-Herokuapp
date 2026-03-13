@@ -17,15 +17,11 @@ describe('Happy path', () => {
   })
 });
 
-describe("Negative login tests", () =>
+describe("Negative login tests", () => {
   users.forEach(user => {
     it(user.name, () => {
       loginPage.login(user.username, user.password);
       loginPage.assertFlashMessage(user.expectedMessage, user.flashClass);
-
-      if (user.loginSuccessful) {
-        loginPage.assertSuccessfulLogin();
-      }
     });
   })
-)
+})
