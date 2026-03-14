@@ -1,10 +1,12 @@
 import loginPage from '../pages/LoginPage';
 import users from '../fixtures/users.json'
 
-beforeEach(() => {
-  loginPage.visit();
-  loginPage.elements.username().should('be.visible');
-  loginPage.elements.password().should('be.visible');
+describe('Setting up...', () => {
+  beforeEach(() => {
+    loginPage.visit();
+    loginPage.elements.username().should('be.visible');
+    loginPage.elements.password().should('be.visible');
+  });
 });
 
 describe('Happy path', () => {
