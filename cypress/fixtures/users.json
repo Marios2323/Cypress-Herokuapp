@@ -13,11 +13,11 @@
     "expectedMessage": "Your password is invalid!",
     "flashClass": "flash error"
   },
-    {
-      "name": "Empty credentials",
-      "username": "",
-      "password": "",
-      "expectedMessage": "Your username is invalid!",
-      "flashClass": "flash error"
-    }
+  {
+    "name": "Empty credentials",
+    "username": "",
+    "password": "",
+    "expectedMessage": "Your username is invalid!",
+    "flashClass": "flash error"
+  }
 ]
