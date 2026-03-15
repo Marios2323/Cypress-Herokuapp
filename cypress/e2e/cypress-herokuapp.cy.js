@@ -1,7 +1,7 @@
 import loginPage from '../pages/LoginPage';
 import users from '../fixtures/users.json'
 
-describe('Setting up...', () => {
+describe('Login Page', () => {
   beforeEach(() => {
     loginPage.visit();
     loginPage.elements.username().should('be.visible');
@@ -11,13 +11,13 @@ describe('Setting up...', () => {
 
   describe('Happy path', () => {
     it("Valid login", () => {
-      cy.env(['username', 'password', 'expectedMessage', 'flashClass']).then((env) => {
+      cy.loginWithValidCredentials().then((env) => {
         loginPage.login(env.username, env.password);
         loginPage.assertFlashMessage(env.expectedMessage, env.flashClass);
         loginPage.assertSuccessfulLogin();
       });
-    })
-  });
+    });
+  })
 
   describe("Negative login tests", () => {
     users.forEach(user => {
@@ -28,9 +28,9 @@ describe('Setting up...', () => {
     });
   });
 
-  describe("Logout", () => { 
-    it("Logs out successfully", () => { 
-      cy.env(['username', 'password', 'expectedMessage', 'flashClass']).then((env) => {
+  describe("Logout", () => {
+    it("Logs out successfully", () => {
+      cy.loginWithValidCredentials().then((env) => {
         loginPage.login(env.username, env.password);
         loginPage.assertFlashMessage(env.expectedMessage, env.flashClass);
         loginPage.assertSuccessfulLogin();
@@ -38,6 +38,6 @@ describe('Setting up...', () => {
         loginPage.elements.username().should('be.visible');
         loginPage.elements.password().should('be.visible');
       });
-    })
-  })
+    });
+  });
 });
