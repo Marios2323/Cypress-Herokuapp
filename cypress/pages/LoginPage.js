@@ -4,7 +4,8 @@ class LoginPage {
     username: () => cy.get('#username'),
     password: () => cy.get('#password'),
     loginButton: () => cy.get('button[type="submit"]'),
-    flashMessage: () => cy.get('#flash')
+    flashMessage: () => cy.get('#flash'),
+    logoutButton: () => cy.contains('a', 'Logout')
   };
 
   visit() {
@@ -30,6 +31,11 @@ class LoginPage {
 
   assertSuccessfulLogin() {
     cy.url().should('include', '/secure');
+  }
+
+  logout() {
+      this.elements.
+        logoutButton().click();
   }
 }
 
