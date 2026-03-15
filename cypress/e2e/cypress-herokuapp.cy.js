@@ -25,6 +25,19 @@ describe('Setting up...', () => {
         loginPage.login(user.username, user.password);
         loginPage.assertFlashMessage(user.expectedMessage, user.flashClass);
       });
+    });
+  });
+
+  describe("Logout", () => { 
+    it("Logs out successfully", () => { 
+      cy.env(['username', 'password', 'expectedMessage', 'flashClass']).then((env) => {
+        loginPage.login(env.username, env.password);
+        loginPage.assertFlashMessage(env.expectedMessage, env.flashClass);
+        loginPage.assertSuccessfulLogin();
+        loginPage.logout();
+        loginPage.elements.username().should('be.visible');
+        loginPage.elements.password().should('be.visible');
+      });
     })
   })
 });
