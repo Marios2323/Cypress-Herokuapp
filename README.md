@@ -1,8 +1,8 @@
-# Cypress Herokuapp Login Automation
+# Cypress Herokuapp Automation
 
-End-to-end login automation project built with Cypress using the Page Object Model (POM) design pattern.
+End-to-end automation project built with Cypress using the Page Object Model (POM) design pattern.
 
-The project validates positive and negative authentication scenarios against the Herokuapp test site.
+The project validates multiple UI scenarios against the Herokuapp test site.
 
 ## 🔍 What This Project Demonstrates
 
@@ -28,15 +28,19 @@ Flash message color validation
 
 Login attempt with invalid password
 
+Checkbox count
+
+Checkbox functionality
+
 ## 📂 Project Structure
 
 cypress 
 
-  e2e > login.cy.js
+  e2e > herokuapp-login.cy.js, herokuapp-checkboxes.cy.js
 
   fixtures > users.json
 
-  pages > LoginPage.js 
+  pages > loginPage.js checkboxPage.js
 
   support > commands.js, e2e.js
 
@@ -44,7 +48,13 @@ cypress
 
 cypress.config.js
 
+cypress.env.example.json
+
 LICENSE
+
+package-lock.json
+
+package.json
 
 README.md
 
