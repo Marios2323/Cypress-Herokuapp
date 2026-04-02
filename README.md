@@ -18,29 +18,43 @@ Professional project structure
 
 ## 🧪 Test Scenarios Covered
 
-Successful login with valid credentials
+* Successful login with valid credentials
 
-Login attempt with invalid username
+* Login attempt with invalid username
 
-Empty credentials scenario
+* Empty credentials scenario
 
-Flash message color validation
+* Flash message color validation
 
-Login attempt with invalid password
+* Login attempt with invalid password
 
-Checkbox count
+* Checkbox count
 
-Checkbox functionality
+* Checkbox functionality
+
+* Table row count
+
+* Table column count
+
+* Assertion of first value in table
+
+* Assertion of buttons
+
+* Assertion of data in table
+
+* Click buttons on table
+
+* Column sorting
 
 ## 📂 Project Structure
 
 cypress 
 
-  e2e > herokuapp-login.cy.js, herokuapp-checkboxes.cy.js
+  e2e > herokuapp-login.cy.js, herokuapp-checkboxes.cy.js, herokuapp-tables.cy.js
 
   fixtures > users.json
 
-  pages > loginPage.js checkboxPage.js
+  pages > loginPage.js, checkboxPage.js, tablesPage.js
 
   support > commands.js, e2e.js
 
